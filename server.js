@@ -29,7 +29,6 @@ app.post("/cards", async (req, res) => {
     const doc = await cards.create(data);
     res.status(201).send(doc);
   } catch (error) {
-    console.log(error);
     res.status(500).send(error);
   }
 });
